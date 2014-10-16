@@ -10,7 +10,7 @@ angular.module 'klyukinApp'
       title: 'MEAN stack',
     },
     {
-      title: 'Angular JS, CoffeeScript,Jquery'
+      title: 'Angular JS, CoffeeScript, JQuery'
     },
     {
       title: 'scss / less / css3 / bootstrap 3'

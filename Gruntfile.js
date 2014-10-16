@@ -112,26 +112,12 @@ module.exports = function (grunt) {
       gruntfile: {
         files: ['Gruntfile.js']
       },
-      livereload: {
-        files: [
-          '{.tmp,<%= yeoman.client %>}/{app,components}/**/*.css',
-          '{.tmp,<%= yeoman.client %>}/{app,components}/**/*.html',
-          '{.tmp,<%= yeoman.client %>}/{app,components}/**/*.js',
-          '!{.tmp,<%= yeoman.client %>}{app,components}/**/*.spec.js',
-          '!{.tmp,<%= yeoman.client %>}/{app,components}/**/*.mock.js',
-          '<%= yeoman.client %>/assets/images/{,*//*}*.{png,jpg,jpeg,gif,webp,svg}'
-        ],
-        options: {
-          livereload: true
-        }
-      },
       express: {
         files: [
           'server/**/*.{js,json}'
         ],
         tasks: ['express:dev', 'wait'],
         options: {
-          livereload: true,
           nospawn: true //Without this option specified express won't be reloaded
         }
       }
@@ -627,7 +613,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {
-      return grunt.task.run(['build', 'env:all', 'env:prod', 'express:prod', 'wait', 'open', 'express-keepalive']);
+      return grunt.task.run(['build', 'env:all', 'env:prod', 'express:prod', 'wait', 'open']);
     }
 
     if (target === 'debug') {
@@ -654,7 +640,6 @@ module.exports = function (grunt) {
       'express:dev',
       'wait',
       'open',
-      'watch'
     ]);
   });
 
