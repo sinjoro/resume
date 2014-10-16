@@ -1,0 +1,74 @@
+div(ng-include='"components/navbar/navbar.html"')
+
+header#banner.hero-unit
+  .container
+    .col-sm-3(class='text-center')
+      img(src='assets/images/klyukin.jpg', alt='Klyukin Stanislav', class='thumbnail avatar')
+    .col-sm-9
+        h1 Klyukin Stanislav
+        p.lead Developer, Startupper, Team Lead
+        a(href='mailto:stanislav@klyukin.net', class='contact-me') Stanislav@Klyukin.net
+.container
+  .row
+    .col-lg-6
+      h1 Bio
+      p
+        | I have started developing appications in the school in 2002 with <strong> Pascal/Delphi </strong> for winning olympiads, including All-Russian School Olympiad 2004.
+      p
+        | I have finished
+        a(href="http://msu.ru/en", target="_blank")  Moscow State University
+        |  in 2010 where I was taken without exams.
+        | Also I have economic background which I gained in the
+        a(href="http://international.fa.ru", target="_blank")  Finance Academy under the Government of the Russian Federation
+        |.
+      p
+        | My goal is to find strong team and to create top project(s) with that team.
+        | I believe that strong business should be powered by the strong team.
+    .col-lg-6
+      h1 Tech Skills:
+      ul.list-group
+        li.list-group-item(ng-repeat='skill in skills') {{skill.title}}
+  .row
+    .col-lg-4
+        h3 2014
+        h4 Pullr - Lead Developer
+        p Fundraiser platform for streamers. To be launched in early of Novermber 2014.
+        p Responsobilities:
+          ul
+            li angular && backend developing
+            li helping to others developers
+            li Pullr API
+    .col-lg-4
+        h3 2011-2013
+        h4 Flap - CTO, Lead Developer
+        p I with partner have launched russian start-up in some ideas similar to
+          a(href="http://yelp.com", target="_blank")  yelp.com
+          |  (not exactly really, flap is web 2.0 project in comparasion with yelp.com)
+          ul
+            li
+              a(href="http://флап.рф", target="_blank") Flap (in russian)
+            li
+              a(href="http://бизнес.флап.рф", target="_blank") Flap Bussines (in russian)
+        p We became enough popular but not as much as required to have strong business
+        p We reached:
+          ul
+            li
+              strong 450 000 reviews
+            li
+              strong 110 000 registrated users
+            li
+              strong 800 000 monthly users
+
+
+    .col-lg-4
+        h3 During University (2006-2010)
+        h4 Developer
+        p I've launched several  internal application using <strong> HTML/Javascript </strong>
+            | && <strong>.NET</strong> working on top 3 Russian bank
+            a(href="http://vtb.com", target="_blank")  VTB
+            |  and
+            a(href="http://www.acdlabs.com/", target="_blank")  ACDLabs company.
+footer.footer
+  .container
+    p
+      a(href="mailto: stanislav@klyukin.net", target="_blank") Klyukin 2014
